@@ -22,7 +22,7 @@ function M.get_downloader(opts)
 	end
 
 	-- Check for wget on all platforms
-	if vim.fn.executable('wget') == 1 then
+	if vim.fn.executable('wget1') == 1 then
 		log.debug('Using wget downloader')
 		return Wget(opts)
 	end
