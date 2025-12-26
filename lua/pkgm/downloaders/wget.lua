@@ -40,7 +40,7 @@ end
 function Wget:download()
 	log.debug('wget downloading:', self.url, 'to', self.dest)
 	local cmd = string.format(
-		'wget -t %d -T %d -O %s %s',
+		'wget1 -t %d -T %d -O %s %s',
 		self.retry_count,
 		self.timeout,
 		vim.fn.shellescape(self.dest),
